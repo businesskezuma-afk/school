@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Ian Abella Castillo - Professional Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-100 text-slate-800 dark:bg-zinc-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-zinc-900/80 border-b border-slate-200 dark:border-zinc-800 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex justify-between items-center">
+            <span class="font-bold tracking-wider text-emerald-600 dark:text-emerald-400 text-lg">MARK IAN CASTILLO</span>
+            
+            <nav class="flex items-center gap-6">
+                <button onclick="switchPage('home')" id="nav-home" class="text-sm font-medium transition-colors text-emerald-600 dark:text-emerald-400 border-b-2 border-emerald-600 pb-1">About</button>
+                <button onclick="switchPage('projects')" id="nav-projects" class="text-sm font-medium transition-colors text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 pb-1">Projects</button>
+                <button onclick="toggleDarkMode()" class="p-2 rounded-full border border-slate-300 dark:border-zinc-700 hover:bg-slate-200 dark:hover:bg-zinc-800 transition-all text-xs font-semibold" title="Toggle Theme">
+                    🌓
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto p-6 md:p-10 w-full flex-grow">
+        
+        <!-- ================= PAGE 1: HOME / ABOUT ================= -->
+        <div id="page-home" class="space-y-12 animate-fadeIn">
+            
+            <!-- Hero Section -->
+            <section class="text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-8 py-10 border-b border-slate-200 dark:border-zinc-800">
+                <div class="space-y-3 max-w-xl">
+                    <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                        BSOA Student & Professional
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Mark Ian Abella Castillo</h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Dedicated to excellence in modern office administration, organization, and digital platform development.
+                    </p>
+                </div>
+                
+                <!-- Dream Destinations Card -->
+                <div class="w-full md:w-72 bg-white dark:bg-zinc-900/90 p-5 rounded-2xl border border-slate-200 dark:border-zinc-800 shadow-sm space-y-3">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
+                        <span>✈️</span> Dream Destinations
+                    </h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center justify-between p-2 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-100 dark:border-zinc-800">
+                            <span class="font-medium flex items-center gap-2">🇯🇵 Japan</span>
+                            <span class="text-xs text-slate-400">Bucket List</span>
+                        </div>
+                        <div class="flex items-center justify-between p-2 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-100 dark:border-zinc-800">
+                            <span class="font-medium flex items-center gap-2">🇨🇦 Canada</span>
+                            <span class="text-xs text-slate-400">Bucket List</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grid Layout for Personal Info, Skills, Education, Experience, Certificates & Languages -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Left Column -->
+                <div class="space-y-8">
+                    <!-- Personal Information -->
+                    <div class="bg-white dark:bg-zinc-900/90 p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-zinc-800 space-y-5">
+                        <h2 class="text-xl font-bold border-b pb-3 border-slate-100 dark:border-zinc-800 flex items-center gap-2">
+                            <span>👤</span> Personal Information
+                        </h2>
+                        
+                        <!-- Profile Picture Section -->
+                        <div class="flex items-center gap-4 pb-4 border-b border-slate-100 dark:border-zinc-800">
+                            <img src="https://i.imgur.com/Vk1OVhk.jpeg" alt="Mark Ian Abella Castillo" class="w-20 h-20 rounded-2xl object-cover border-2 border-emerald-600 shadow-md">
+                            <div>
+                                <h4 class="font-bold text-base">Mark Ian Abella Castillo</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">BSOA Student</p>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Age:</span> <span class="font-medium">22 years old</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Date of Birth:</span> <span class="font-medium">July 20, 2004</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Gender:</span> <span class="font-medium">Male</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Religion:</span> <span class="font-medium">Catholic</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Citizenship:</span> <span class="font-medium">Filipino</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Contact No.:</span> <span class="font-medium">09703767560</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Email:</span> <span class="font-medium">markcastillo0326@gmail.com</span></li>
+                            <li class="pt-2 border-t border-slate-100 dark:border-zinc-800">
+                                <span class="text-slate-500 dark:text-slate-400 block mb-1">Address:</span> 
+                                <span class="font-medium">527 Tramo St., Brgy. Maulawin, Pagsanjan, Laguna</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Skills Section -->
+                    <div class="bg-white dark:bg-zinc-900/90 p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-zinc-800 space-y-4">
+                        <h2 class="text-xl font-bold border-b pb-3 border-slate-100 dark:border-zinc-800 flex items-center gap-2">
+                            <span>⚡</span> Skills
+                        </h2>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3.5 py-1.5 rounded-xl text-sm font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                                📊 Data Entry
+                            </span>
+                            <span class="px-3.5 py-1.5 rounded-xl text-sm font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                                📈 Microsoft Excel (Expert)
+                            </span>
+                            <span class="px-3.5 py-1.5 rounded-xl text-sm font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                                💼 Microsoft Office
+                            </span>
+                            <span class="px-3.5 py-1.5 rounded-xl text-sm font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                                🎨 Creative & Photo Editing
+                            </span>
+                            <span class="px-3.5 py-1.5 rounded-xl text-sm font-medium bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                                🌐 Web Platform
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Languages Spoken -->
+                    <div class="bg-white dark:bg-zinc-900/90 p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-zinc-800 space-y-3">
+                        <h2 class="text-xl font-bold border-b pb-3 border-slate-100 dark:border-zinc-800 flex items-center gap-2">
+                            <span>🗣️</span> Languages
+                        </h2>
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex justify-between items-center"><span class="text-slate-500 dark:text-slate-400">Filipino</span> <span class="font-medium text-emerald-600 dark:text-emerald-400">Native</span></li>
+                            <li class="flex justify-between items-center"><span class="text-slate-500 dark:text-slate-400">English</span> <span class="font-medium text-emerald-600 dark:text-emerald-400">Normal</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-8">
+                    <!-- Education & Background -->
+                    <div class="bg-white dark:bg-zinc-900/90 p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-zinc-800 space-y-5">
+                        <h2 class="text-xl font-bold border-b pb-3 border-slate-100 dark:border-zinc-800 flex items-center gap-2">
+                            <span>🎓</span> Education & Background
+                        </h2>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Course:</span> <span class="font-medium">BSOA</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Modality:</span> <span class="font-medium">Face to Face / Digital</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Senior High School:</span> <span class="font-medium">AVM Foundation Inc.</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Year Graduated:</span> <span class="font-medium">2023</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">Strand/Section:</span> <span class="font-medium">Cook 12A</span></li>
+                            <li class="flex justify-between"><span class="text-slate-500 dark:text-slate-400">General Average:</span> <span class="font-medium">90</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Work Experience Section -->
+                    <div class="bg-white dark:bg-zinc-900/90 p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-zinc-800 space-y-4">
+                        <h2 class="text-xl font-bold border-b pb-3 border-slate-100 dark:border-zinc-800 flex items-center gap-2">
+                            <span>💼</span> Work Experience
+                        </h2>
+                        <div class="space-y-4 text-sm">
+                            <div class="border-l-2 border-emerald-600 pl-4 space-y-1">
+                                <div class="flex justify-between items-center">
+                                    <h4 class="font-bold text-base text-slate-800 dark:text-white">Freelance Photo Editor</h4>
+                                    <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">Freelance</span>
+                                </div>
+                                <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed">
+                                    Providing high-quality photo editing and digital creative enhancements for various clients and online projects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificates & Awards -->
+                    <div class="bg-white dark:bg-zinc-900/90 p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-zinc-800 space-y-4">
+                        <h2 class="text-xl font-bold border-b pb-3 border-slate-100 dark:border-zinc-800 flex items-center gap-2">
+                            <span>🏆</span> Certificates & Awards
+                        </h2>
+                        <div class="space-y-3 text-sm">
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-100 dark:border-zinc-800 space-y-1">
+                                <h4 class="font-bold text-slate-800 dark:text-white">Best in Application Software</h4>
+                                <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium">College Academic Award</p>
+                            </div>
+                            <div class="p-3 rounded-xl bg-slate-50 dark:bg-zinc-800/60 border border-slate-100 dark:border-zinc-800 space-y-1">
+                                <h4 class="font-bold text-slate-800 dark:text-white">Senior High School Completion</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">AVM Foundation Inc. • 2023</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Objectives -->
+                    <div class="bg-white dark:bg-zinc-900/90 p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-zinc-800 space-y-3">
+                        <h2 class="text-xl font-bold border-b pb-3 border-slate-100 dark:border-zinc-800 flex items-center gap-2">
+                            <span>🎯</span> Objectives
+                        </h2>
+                        <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                            As a college student pursuing a degree in Bachelor of Science in Office Administration (BSOA), my objective is to develop my skills and knowledge in modern office management, excel in academic and professional tasks, and prepare myself for a successful career ahead through proper discipline and dedication.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= PAGE 2: PROJECTS ================= -->
+        <div id="page-projects" class="space-y-8 hidden animate-fadeIn">
+            <div class="space-y-2 border-b border-slate-200 dark:border-zinc-900 pb-6">
+                <h2 class="text-3xl font-extrabold">My Projects</h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm">Explore the digital platforms, web applications, and services I have built.</p>
+            </div>
+
+            <!-- Project Card Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                
+                <!-- Project 1: Ascend Service -->
+                <div class="bg-white dark:bg-zinc-900/90 rounded-2xl overflow-hidden border border-slate-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between hover:border-emerald-500 transition-all">
+                    <div class="w-full bg-black overflow-hidden border-b border-slate-200 dark:border-zinc-800 relative group cursor-pointer" onclick="openModal(this.querySelector('img').src)">
+                        <img src="https://i.imgur.com/HkRFtG3.jpeg" alt="Ascend Service Dashboard Preview" class="w-full h-52 object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-semibold gap-2">
+                            <span>🔍 Click to view full image</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-emerald-600 text-white font-medium">Web Platform</span>
+                                <span class="text-xs text-slate-400 dark:text-slate-500">Active Project</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-white">Ascend Service</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                A comprehensive web platform designed to boost social media accounts and digital channels, showcasing expertise in modern web functionality and service handling.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="https://ascend-service.org" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium transition-colors shadow-sm">
+                                <span>Visit Live Website</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Kezuma Facebook Page -->
+                <div class="bg-white dark:bg-zinc-900/90 rounded-2xl overflow-hidden border border-slate-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between hover:border-emerald-500 transition-all">
+                    <div class="w-full bg-black overflow-hidden border-b border-slate-200 dark:border-zinc-800 relative group cursor-pointer" onclick="openModal(this.querySelector('img').src)">
+                        <img src="https://i.imgur.com/hQlQTYV.png" alt="Kezuma Facebook Page Preview" class="w-full h-52 object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-semibold gap-2">
+                            <span>🔍 Click to view full image</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6 space-y-6 flex-grow flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs px-2.5 py-1 rounded-md bg-blue-600 text-white font-medium">Social Page</span>
+                                <span class="text-xs text-slate-400 dark:text-slate-500">Community & Brand</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 dark:text-white">Kezuma Page</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                                Official online community and brand page of Kezuma, dedicated to digital engagement, updates, and connecting with users across social media.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="https://www.facebook.com/Kezumaa" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors shadow-sm">
+                                <span>Visit Facebook Page</span>
+                                <span>&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm hidden items-center justify-center p-4" onclick="closeModal()">
+        <div class="relative max-w-5xl w-full max-h-[90vh] flex items-center justify-center" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white bg-emerald-600 hover:bg-emerald-700 px-4 py-2 rounded-full text-sm font-bold shadow-lg transition-colors">
+                ✕ Close
+            </button>
+            <img id="modalImage" src="" alt="Full Preview" class="max-w-full max-h-[85vh] object-contain rounded-xl border border-zinc-700 shadow-2xl">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center p-6 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-zinc-800 mt-12">
+        &copy; 2026 Mark Ian Abella Castillo. All Rights Reserved.
+    </footer>
+
+    <!-- JavaScript for Navigation, Dark Mode, and Image Modal -->
+    <script>
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+            } else {
+                html.classList.add('dark');
+            }
+        }
+
+        function switchPage(page) {
+            const homePage = document.getElementById('page-home');
+            const projectsPage = document.getElementById('page-projects');
+            const navHome = document.getElementById('nav-home');
+            const navProjects = document.getElementById('nav-projects');
+
+            if (page === 'home') {
+                homePage.classList.remove('hidden');
+                projectsPage.classList.add('hidden');
+                
+                navHome.className = "text-sm font-medium transition-colors text-emerald-600 dark:text-emerald-400 border-b-2 border-emerald-600 pb-1";
+                navProjects.className = "text-sm font-medium transition-colors text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 pb-1";
+            } else if (page === 'projects') {
+                homePage.classList.add('hidden');
+                projectsPage.classList.remove('hidden');
+                
+                navProjects.className = "text-sm font-medium transition-colors text-emerald-600 dark:text-emerald-400 border-b-2 border-emerald-600 pb-1";
+                navHome.className = "text-sm font-medium transition-colors text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 pb-1";
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+    </script>
+</body>
+</html>
